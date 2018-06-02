@@ -5,17 +5,15 @@
  */
 package topografiap;
 
+
+
 /**
  *
  * @author fam. moreno
  */
 public class TopografiaP {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+      
     }
-    
 }
