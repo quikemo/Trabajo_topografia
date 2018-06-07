@@ -45,7 +45,7 @@ public class panel_principal extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         jMenuItem7 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        javax.swing.JMenuBar jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
@@ -77,6 +77,8 @@ public class panel_principal extends javax.swing.JFrame {
         jMenuBar1.setBorder(null);
         jMenuBar1.setAutoscrolls(true);
         jMenuBar1.setComponentPopupMenu(jPopupMenu2);
+        jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jMenuBar1.setName(""); // NOI18N
 
         jMenu1.setBackground(new java.awt.Color(204, 204, 255));
         jMenu1.setBorder(null);
@@ -145,7 +147,6 @@ public class panel_principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
