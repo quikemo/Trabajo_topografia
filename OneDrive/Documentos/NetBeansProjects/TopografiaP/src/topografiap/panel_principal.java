@@ -80,7 +80,7 @@ public class panel_principal extends javax.swing.JFrame {
         jMenu1.setBorder(null);
         jMenu1.setText("File");
 
-        jMenuItem1.setText("jMenuItem1");
+        jMenuItem1.setText("nuevo");
         jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
