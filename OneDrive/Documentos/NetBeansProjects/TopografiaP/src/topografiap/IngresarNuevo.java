@@ -36,8 +36,8 @@ public class IngresarNuevo extends javax.swing.JFrame {
         jBtnAceptar = new javax.swing.JButton();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jTabbedPane4 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Ingrese Valores");
@@ -60,8 +60,8 @@ public class IngresarNuevo extends javax.swing.JFrame {
         });
 
         jTabbedPane2.addTab("tab1", jTabbedPane1);
-        jTabbedPane2.addTab("tab2", jLabel1);
-        jTabbedPane2.addTab("tab3", jLabel2);
+        jTabbedPane2.addTab("tab2", jTabbedPane3);
+        jTabbedPane2.addTab("tab3", jTabbedPane4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,9 +133,9 @@ public class IngresarNuevo extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnAceptar;
     private javax.swing.JButton jBtnCancelar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTabbedPane jTabbedPane4;
     // End of variables declaration//GEN-END:variables
 }
