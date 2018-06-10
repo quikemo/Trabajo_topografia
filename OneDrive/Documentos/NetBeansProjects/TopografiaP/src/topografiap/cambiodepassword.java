@@ -16,6 +16,7 @@ public class cambiodepassword extends javax.swing.JFrame {
      */
     public cambiodepassword() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -37,6 +38,7 @@ public class cambiodepassword extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 153));
         setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(35, 35, 91));
