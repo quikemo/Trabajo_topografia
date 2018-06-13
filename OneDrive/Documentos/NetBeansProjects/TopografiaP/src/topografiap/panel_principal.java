@@ -36,38 +36,12 @@ public class panel_principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPopupMenu2 = new javax.swing.JPopupMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jSeparator3 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem7 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         javax.swing.JMenuBar jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-
-        jMenuItem4.setText("jMenuItem4");
-        jPopupMenu2.add(jMenuItem4);
-
-        jMenuItem5.setText("jMenuItem5");
-        jPopupMenu2.add(jMenuItem5);
-        jPopupMenu2.add(jSeparator2);
-
-        jMenu3.setText("jMenu3");
-
-        jMenuItem6.setText("jMenuItem6");
-        jMenu3.add(jMenuItem6);
-        jMenu3.add(jSeparator3);
-
-        jMenuItem7.setText("jMenuItem7");
-        jMenu3.add(jMenuItem7);
-
-        jPopupMenu2.add(jMenu3);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -77,7 +51,6 @@ public class panel_principal extends javax.swing.JFrame {
 
         jMenuBar1.setBorder(null);
         jMenuBar1.setAutoscrolls(true);
-        jMenuBar1.setComponentPopupMenu(jPopupMenu2);
         jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jMenuBar1.setName(""); // NOI18N
 
@@ -161,17 +134,9 @@ public class panel_principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPopupMenu jPopupMenu2;
-    private javax.swing.JPopupMenu.Separator jSeparator2;
-    private javax.swing.JPopupMenu.Separator jSeparator3;
     // End of variables declaration//GEN-END:variables
 
   int cont = 0;  
