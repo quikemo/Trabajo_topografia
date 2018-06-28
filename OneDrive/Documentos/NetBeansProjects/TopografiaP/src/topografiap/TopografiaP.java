@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package topografiap;
 
 
@@ -14,6 +10,7 @@ package topografiap;
 public class TopografiaP {
 
     public static void main(String[] args) {
-      
+      panel_principal objec_frame = new panel_principal();
+      objec_frame.setVisible(true);
     }
 }
