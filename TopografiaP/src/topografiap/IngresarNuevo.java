@@ -69,7 +69,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jComboBox3 = new javax.swing.JComboBox<>();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
@@ -89,12 +88,14 @@ public class IngresarNuevo extends javax.swing.JFrame {
         jLabel28 = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        txtNEstacion = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
         txtDisXEst = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
@@ -103,6 +104,7 @@ public class IngresarNuevo extends javax.swing.JFrame {
         txtDeflexionS = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
         txtDisXMoj = new javax.swing.JTextField();
+        jButton10 = new javax.swing.JButton();
 
         jTextField13.setText("jTextField13");
 
@@ -254,7 +256,7 @@ public class IngresarNuevo extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(txtTASegundos, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(txtAISegundos, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                        .addGap(0, 20, Short.MAX_VALUE)))
+                        .addGap(0, 42, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(77, 77, 77)
@@ -284,7 +286,7 @@ public class IngresarNuevo extends javax.swing.JFrame {
                     .addComponent(txtAIMinutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtAISegundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(vistaaf)
                     .addComponent(vistaat))
@@ -409,13 +411,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(153, 153, 153));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "seleccione estacion" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
         jLabel24.setText("lectura #4");
 
         jLabel25.setText("lectura #3");
@@ -424,6 +419,11 @@ public class IngresarNuevo extends javax.swing.JFrame {
 
         jLabel27.setText("lectura #1");
 
+        txtL4Grados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtL4GradosActionPerformed(evt);
+            }
+        });
         txtL4Grados.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtL4GradosKeyPressed(evt);
@@ -433,6 +433,11 @@ public class IngresarNuevo extends javax.swing.JFrame {
             }
         });
 
+        txtL4Minutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtL4MinutosActionPerformed(evt);
+            }
+        });
         txtL4Minutos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtL4MinutosKeyPressed(evt);
@@ -460,6 +465,11 @@ public class IngresarNuevo extends javax.swing.JFrame {
             }
         });
 
+        txtL3Minutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtL3MinutosActionPerformed(evt);
+            }
+        });
         txtL3Minutos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtL3MinutosKeyPressed(evt);
@@ -543,10 +553,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
 
         jLabel30.setText("segundos");
 
-        jLabel31.setText("Estacion:");
-
-        txtNEstacion.setEnabled(false);
-
         jLabel32.setText("Distancia");
 
         txtDisXEst.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -562,125 +568,136 @@ public class IngresarNuevo extends javax.swing.JFrame {
 
         jButton6.setText("Siguiente");
 
+        jLabel1.setText("Estacion");
+
+        jTextField1.setEnabled(false);
+
+        jButton7.setText("Anterior");
+
+        jButton8.setText("Siguiente");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(jLabel28)
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel29)
-                        .addGap(0, 15, Short.MAX_VALUE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(txtNEstacion, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel25)
-                                    .addComponent(jLabel24)
-                                    .addComponent(jLabel26)
-                                    .addComponent(jLabel27))
-                                .addGap(27, 27, 27)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtL2Grados)
-                                    .addComponent(txtL1Grados)
-                                    .addComponent(txtL4Grados)
-                                    .addComponent(txtL3Grados)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel31)))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtL3Minutos, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtL2Minutos, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtL1Minutos, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtL4Minutos, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtDisXEst, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtL1Segundos, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtL2Segundos, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtL3Segundos, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(txtL4Segundos, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(jLabel30)
-                        .addGap(0, 15, Short.MAX_VALUE)))
+                    .addComponent(jLabel25)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel27))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtL2Grados, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                    .addComponent(txtL3Grados, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtL4Grados, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtL1Grados))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtL3Minutos, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                    .addComponent(txtL2Minutos, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtL1Minutos, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtL4Minutos))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtL1Segundos)
+                    .addComponent(txtL2Segundos)
+                    .addComponent(txtL4Segundos)
+                    .addComponent(txtL3Segundos))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(88, 88, 88))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton6)
-                .addContainerGap())
+                .addComponent(txtDisXEst, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(85, 85, 85)
+                .addComponent(jButton6))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(135, 135, 135)
+                .addComponent(jLabel28)
+                .addGap(75, 75, 75)
+                .addComponent(jLabel29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addComponent(jLabel30)
+                .addGap(35, 35, 35))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jButton7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(184, 184, 184))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel32)
+                        .addGap(171, 171, 171))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7)
+                    .addComponent(jButton8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
                     .addComponent(jLabel29)
                     .addComponent(jLabel30))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
-                    .addComponent(txtL4Grados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtL4Minutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtL4Segundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtL4Segundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtL4Grados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
-                    .addComponent(txtL3Grados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtL3Segundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtL3Minutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtL3Segundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(txtL2Grados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtL2Minutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtL2Segundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtL3Grados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel25))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtL2Grados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtL2Minutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtL2Segundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
                     .addComponent(txtL1Grados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtL1Segundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtL1Minutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel32)
-                    .addComponent(jLabel31))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNEstacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDisXEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
-                .addContainerGap())
+                    .addComponent(txtL1Minutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtL1Segundos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton5)
+                            .addComponent(jButton6)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel32)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtDisXEst, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18))
         );
 
         jTabbedPane2.addTab("tab3", jPanel4);
 
         jPanel5.setBackground(new java.awt.Color(153, 153, 153));
 
+        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel33.setText("Mojones");
 
         jLabel34.setText("Deflexion");
@@ -723,47 +740,55 @@ public class IngresarNuevo extends javax.swing.JFrame {
             }
         });
 
+        jButton10.setText("Guardar");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel35))
+                .addGap(34, 34, 34)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtDeflexionG, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDisXMoj, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(jLabel33))
+                        .addGap(91, 91, 91)
+                        .addComponent(jButton10))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel34)
-                            .addComponent(jLabel35))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtDeflexionG, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                            .addComponent(txtDisXMoj))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtDeflexionM, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(txtDeflexionS, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtDeflexionM, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtDeflexionS, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(55, 55, 55))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(173, 173, 173)
+                .addComponent(jLabel33)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(46, 46, 46)
                 .addComponent(jLabel33)
-                .addGap(42, 42, 42)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(45, 45, 45)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel34)
-                    .addComponent(txtDeflexionG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDeflexionM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDeflexionS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(41, 41, 41)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel35)
-                    .addComponent(txtDisXMoj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(180, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtDeflexionG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtDeflexionM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtDeflexionS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtDisXMoj, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(72, 72, 72)
+                .addComponent(jButton10)
+                .addGap(47, 47, 47))
         );
 
         jTabbedPane2.addTab("tab4", jPanel5);
@@ -803,14 +828,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
     private void jBtnAceptarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnAceptarMouseMoved
 
     }//GEN-LAST:event_jBtnAceptarMouseMoved
-
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void txtNVerticesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNVerticesKeyTyped
         int limite = 10;
@@ -1016,277 +1033,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNMojonesKeyPressed
 
-    private void txtL4GradosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4GradosKeyTyped
-        int limite = 10;
-        if (txtL4Grados.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL4Grados.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL4GradosKeyTyped
-
-    private void txtL4GradosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4GradosKeyPressed
-         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL4Minutos.requestFocus();
-        }
-    }//GEN-LAST:event_txtL4GradosKeyPressed
-
-    private void txtL4MinutosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4MinutosKeyPressed
-         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL4Segundos.requestFocus();
-        }
-    }//GEN-LAST:event_txtL4MinutosKeyPressed
-
-    private void txtL4MinutosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4MinutosKeyTyped
-        int limite = 10;
-        if (txtL4Minutos.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL4Minutos.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL4MinutosKeyTyped
-
-    private void txtL4SegundosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4SegundosKeyTyped
-        int limite = 10;
-        if (txtL4Segundos.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL4Segundos.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL4SegundosKeyTyped
-
-    private void txtL4SegundosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4SegundosKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL3Grados.requestFocus();
-        }
-    }//GEN-LAST:event_txtL4SegundosKeyPressed
-
-    private void txtL3GradosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3GradosKeyTyped
-        int limite = 10;
-        if (txtL3Grados.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL3Grados.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL3GradosKeyTyped
-
-    private void txtL3GradosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3GradosKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL3Minutos.requestFocus();
-        }
-    }//GEN-LAST:event_txtL3GradosKeyPressed
-
-    private void txtL3MinutosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3MinutosKeyTyped
-        int limite = 10;
-        if (txtL3Minutos.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL3Minutos.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL3MinutosKeyTyped
-
-    private void txtL3MinutosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3MinutosKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL3Segundos.requestFocus();
-        }
-    }//GEN-LAST:event_txtL3MinutosKeyPressed
-
-    private void txtL3SegundosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3SegundosKeyTyped
-        int limite = 10;
-        if (txtL3Segundos.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL3Segundos.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL3SegundosKeyTyped
-
-    private void txtL3SegundosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3SegundosKeyPressed
-         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL2Grados.requestFocus();
-        }
-    }//GEN-LAST:event_txtL3SegundosKeyPressed
-
-    private void txtL2GradosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2GradosKeyTyped
-        int limite = 10;
-        if (txtL2Grados.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL2Grados.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL2GradosKeyTyped
-
-    private void txtL2GradosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2GradosKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL2Minutos.requestFocus();
-        }
-    }//GEN-LAST:event_txtL2GradosKeyPressed
-
-    private void txtL2MinutosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2MinutosKeyTyped
-        int limite = 10;
-        if (txtL2Minutos.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL2Minutos.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL2MinutosKeyTyped
-
-    private void txtL2MinutosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2MinutosKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL2Segundos.requestFocus();
-        }
-    }//GEN-LAST:event_txtL2MinutosKeyPressed
-
-    private void txtL2SegundosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2SegundosKeyTyped
-        int limite = 10;
-        if (txtL2Segundos.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL2Segundos.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL2SegundosKeyTyped
-
-    private void txtL2SegundosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2SegundosKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL1Grados.requestFocus();
-        }
-    }//GEN-LAST:event_txtL2SegundosKeyPressed
-
-    private void txtL1GradosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1GradosKeyTyped
-        int limite = 10;
-        if (txtL1Grados.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL1Grados.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL1GradosKeyTyped
-
-    private void txtL1GradosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1GradosKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL1Minutos.requestFocus();
-        }
-    }//GEN-LAST:event_txtL1GradosKeyPressed
-
-    private void txtL1MinutosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1MinutosKeyTyped
-        int limite = 10;
-        if (txtL1Minutos.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL1Minutos.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL1MinutosKeyTyped
-
-    private void txtL1MinutosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1MinutosKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtL1Segundos.requestFocus();
-        }
-    }//GEN-LAST:event_txtL1MinutosKeyPressed
-
-    private void txtL1SegundosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1SegundosKeyTyped
-        int limite = 10;
-        if (txtL1Segundos.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtL1Segundos.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtL1SegundosKeyTyped
-
-    private void txtL1SegundosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1SegundosKeyPressed
-        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
-            txtDisXEst.requestFocus();
-        }
-    }//GEN-LAST:event_txtL1SegundosKeyPressed
-
-    private void txtDisXEstKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDisXEstKeyTyped
-        int limite = 10;
-        if (txtDisXEst.getText().length() > limite) {
-            evt.consume();
-        }
-        char dato = evt.getKeyChar();
-        String cadena = "" + dato;
-        if (!cadena.matches("[0-9.]")) {
-            evt.consume();
-        }
-        if (evt.getKeyChar() == '.' && txtDisXEst.getText().contains(".")) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_txtDisXEstKeyTyped
-
-    private void txtDisXEstKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDisXEstKeyPressed
-         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDisXEstKeyPressed
-
     private void txtDeflexionGKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDeflexionGKeyTyped
         int limite = 10;
         if (txtDeflexionG.getText().length() > limite) {
@@ -1369,6 +1115,293 @@ public class IngresarNuevo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDisXMojKeyPressed
 
+    private void txtDisXEstKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDisXEstKeyTyped
+        int limite = 10;
+        if (txtDisXEst.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtDisXEst.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtDisXEstKeyTyped
+
+    private void txtDisXEstKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDisXEstKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDisXEstKeyPressed
+
+    private void txtL2SegundosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2SegundosKeyTyped
+        int limite = 10;
+        if (txtL2Segundos.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL2Segundos.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL2SegundosKeyTyped
+
+    private void txtL2SegundosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2SegundosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL1Grados.requestFocus();
+        }
+    }//GEN-LAST:event_txtL2SegundosKeyPressed
+
+    private void txtL2MinutosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2MinutosKeyTyped
+        int limite = 10;
+        if (txtL2Minutos.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL2Minutos.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL2MinutosKeyTyped
+
+    private void txtL2MinutosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2MinutosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL2Segundos.requestFocus();
+        }
+    }//GEN-LAST:event_txtL2MinutosKeyPressed
+
+    private void txtL2GradosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2GradosKeyTyped
+        int limite = 10;
+        if (txtL2Grados.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL2Grados.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL2GradosKeyTyped
+
+    private void txtL2GradosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL2GradosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL2Minutos.requestFocus();
+        }
+    }//GEN-LAST:event_txtL2GradosKeyPressed
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void txtL1GradosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1GradosKeyTyped
+        int limite = 10;
+        if (txtL1Grados.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL1Grados.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL1GradosKeyTyped
+
+    private void txtL1GradosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1GradosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL1Minutos.requestFocus();
+        }
+    }//GEN-LAST:event_txtL1GradosKeyPressed
+
+    private void txtL1SegundosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1SegundosKeyTyped
+        int limite = 10;
+        if (txtL1Segundos.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL1Segundos.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL1SegundosKeyTyped
+
+    private void txtL1SegundosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1SegundosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtDisXEst.requestFocus();
+        }
+    }//GEN-LAST:event_txtL1SegundosKeyPressed
+
+    private void txtL1MinutosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1MinutosKeyTyped
+        int limite = 10;
+        if (txtL1Minutos.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL1Minutos.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL1MinutosKeyTyped
+
+    private void txtL1MinutosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL1MinutosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL1Segundos.requestFocus();
+        }
+    }//GEN-LAST:event_txtL1MinutosKeyPressed
+
+    private void txtL3SegundosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3SegundosKeyTyped
+        int limite = 10;
+        if (txtL3Segundos.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL3Segundos.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL3SegundosKeyTyped
+
+    private void txtL3SegundosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3SegundosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL2Grados.requestFocus();
+        }
+    }//GEN-LAST:event_txtL3SegundosKeyPressed
+
+    private void txtL3MinutosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3MinutosKeyTyped
+        int limite = 10;
+        if (txtL3Minutos.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL3Minutos.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL3MinutosKeyTyped
+
+    private void txtL3MinutosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3MinutosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL3Segundos.requestFocus();
+        }
+    }//GEN-LAST:event_txtL3MinutosKeyPressed
+
+    private void txtL3GradosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3GradosKeyTyped
+        int limite = 10;
+        if (txtL3Grados.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL3Grados.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL3GradosKeyTyped
+
+    private void txtL3GradosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL3GradosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL3Minutos.requestFocus();
+        }
+    }//GEN-LAST:event_txtL3GradosKeyPressed
+
+    private void txtL4SegundosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4SegundosKeyTyped
+        int limite = 10;
+        if (txtL4Segundos.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL4Segundos.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL4SegundosKeyTyped
+
+    private void txtL4SegundosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4SegundosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL3Grados.requestFocus();
+        }
+    }//GEN-LAST:event_txtL4SegundosKeyPressed
+
+    private void txtL4MinutosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4MinutosKeyTyped
+        int limite = 10;
+        if (txtL4Minutos.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL4Minutos.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL4MinutosKeyTyped
+
+    private void txtL4MinutosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4MinutosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL4Segundos.requestFocus();
+        }
+    }//GEN-LAST:event_txtL4MinutosKeyPressed
+
+    private void txtL4GradosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4GradosKeyTyped
+        int limite = 10;
+        if (txtL4Grados.getText().length() > limite) {
+            evt.consume();
+        }
+        char dato = evt.getKeyChar();
+        String cadena = "" + dato;
+        if (!cadena.matches("[0-9.]")) {
+            evt.consume();
+        }
+        if (evt.getKeyChar() == '.' && txtL4Grados.getText().contains(".")) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtL4GradosKeyTyped
+
+    private void txtL4GradosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtL4GradosKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            txtL4Minutos.requestFocus();
+        }
+    }//GEN-LAST:event_txtL4GradosKeyPressed
+
+    private void txtL4GradosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtL4GradosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtL4GradosActionPerformed
+
+    private void txtL4MinutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtL4MinutosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtL4MinutosActionPerformed
+
+    private void txtL3MinutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtL3MinutosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtL3MinutosActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1409,12 +1442,15 @@ public class IngresarNuevo extends javax.swing.JFrame {
     private javax.swing.JButton jBtnAceptar;
     private javax.swing.JButton jBtnCancelar;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1429,7 +1465,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
@@ -1441,6 +1476,7 @@ public class IngresarNuevo extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTextField txtAIGrados;
     private javax.swing.JTextField txtAIMinutos;
@@ -1464,7 +1500,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
     private javax.swing.JTextField txtL4Segundos;
     private javax.swing.JTextField txtLatitud;
     private javax.swing.JTextField txtLongitud;
-    private javax.swing.JTextField txtNEstacion;
     private javax.swing.JTextField txtNMojones;
     private javax.swing.JTextField txtNVertices;
     private javax.swing.JTextField txtTAGrados;
