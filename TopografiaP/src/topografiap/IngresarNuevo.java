@@ -39,7 +39,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
         jTextField13 = new javax.swing.JTextField();
         grupodebtn = new javax.swing.ButtonGroup();
         jBtnCancelar = new javax.swing.JButton();
-        jBtnAceptar = new javax.swing.JButton();
         tabbedp = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -56,7 +55,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
         vistaat = new javax.swing.JRadioButton();
         jLabel11 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
@@ -105,7 +103,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         txtDisXMoj = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
 
         jTextField13.setText("jTextField13");
@@ -120,13 +117,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
         jBtnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnCancelarActionPerformed(evt);
-            }
-        });
-
-        jBtnAceptar.setText("Aceptar");
-        jBtnAceptar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                jBtnAceptarMouseMoved(evt);
             }
         });
 
@@ -224,13 +214,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Cancelar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -239,9 +222,7 @@ public class IngresarNuevo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jButton2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(10, 316, Short.MAX_VALUE)
                         .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -303,9 +284,7 @@ public class IngresarNuevo extends javax.swing.JFrame {
                     .addComponent(vistaaf)
                     .addComponent(vistaat))
                 .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                .addComponent(jButton1)
                 .addGap(25, 25, 25))
         );
 
@@ -321,6 +300,11 @@ public class IngresarNuevo extends javax.swing.JFrame {
 
         jLabel14.setText("Latitud");
 
+        txtLongitud.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLongitudActionPerformed(evt);
+            }
+        });
         txtLongitud.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtLongitudKeyPressed(evt);
@@ -577,6 +561,11 @@ public class IngresarNuevo extends javax.swing.JFrame {
 
         jLabel32.setText("Distancia");
 
+        txtDisXEst.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDisXEstActionPerformed(evt);
+            }
+        });
         txtDisXEst.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtDisXEstKeyPressed(evt);
@@ -775,13 +764,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
 
         jButton10.setText("Guardar");
 
-        jButton9.setText("cancelar");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
-            }
-        });
-
         jButton11.setText("regresar");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -795,13 +777,8 @@ public class IngresarNuevo extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jButton11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton9)
-                        .addGap(59, 59, 59))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(0, 19, Short.MAX_VALUE)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel34)
@@ -814,15 +791,15 @@ public class IngresarNuevo extends javax.swing.JFrame {
                         .addComponent(txtDeflexionM, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtDeflexionS, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(78, 78, 78))))
+                        .addGap(78, 78, 78))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jButton11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton10)
+                        .addGap(35, 35, 35))))
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(jLabel33))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addComponent(jButton10)))
+                .addGap(173, 173, 173)
+                .addComponent(jLabel33)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -841,12 +818,10 @@ public class IngresarNuevo extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel35, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtDisXMoj, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addComponent(jButton10)
-                .addGap(38, 38, 38)
+                .addGap(99, 99, 99)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9)
-                    .addComponent(jButton11))
+                    .addComponent(jButton11)
+                    .addComponent(jButton10))
                 .addGap(20, 20, 20))
         );
 
@@ -857,23 +832,19 @@ public class IngresarNuevo extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jBtnAceptar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBtnCancelar)
-                .addGap(8, 8, 8))
-            .addGroup(layout.createSequentialGroup()
                 .addComponent(tabbedp)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(169, 169, 169)
+                .addComponent(jBtnCancelar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(tabbedp)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnCancelar)
-                    .addComponent(jBtnAceptar))
+                .addComponent(jBtnCancelar)
                 .addGap(11, 11, 11))
         );
 
@@ -883,10 +854,6 @@ public class IngresarNuevo extends javax.swing.JFrame {
     private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_jBtnCancelarActionPerformed
-
-    private void jBtnAceptarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnAceptarMouseMoved
-
-    }//GEN-LAST:event_jBtnAceptarMouseMoved
 
     private void txtNVerticesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNVerticesKeyTyped
         int limite = 10;
@@ -1462,19 +1429,39 @@ public class IngresarNuevo extends javax.swing.JFrame {
     }//GEN-LAST:event_txtL3MinutosActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-tabbedp.setSelectedIndex(1);        // TODO add your handling code here:
+        if (txtNVertices.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "Debe ingresar el numero de vertices");
+        txtNVertices.requestFocus();
+        }else if (txtTAGrados.getText().isEmpty() && txtTAMinutos.getText().isEmpty() && txtTASegundos.getText().isEmpty()){
+           JOptionPane.showMessageDialog(this, "debe ingresar la tolerancia");
+           txtTAGrados.requestFocus();
+        }else if(txtAIGrados.getText().isEmpty() && txtAIMinutos.getText().isEmpty() && txtAISegundos.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "debe ingresar el azimut inicial");
+        txtAIGrados.requestFocus();
+        }else if(vistaaf.isSelected()==false && vistaat.isSelected()==false){ 
+            JOptionPane.showMessageDialog(this, "Debe de seleccionar que tipo de vista utilizo");}
+            else{
+        tabbedp.setSelectedIndex(1); 
+        }       // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 tabbedp.setSelectedIndex(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-tabbedp.setSelectedIndex(2);        // TODO add your handling code here:
+        if(txtLongitud.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "Debe ingresar la longitud de la coordenada inicial");
+        txtLongitud.requestFocus();
+        }else if(txtLatitud.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "Debe ingresar la Latitud");
+        txtLatitud.requestFocus();
+        }else if(txtNMojones.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "Debe ingresar el numero de mojones");
+        txtNMojones.requestFocus();
+        }else{
+        tabbedp.setSelectedIndex(2); }
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -1482,16 +1469,36 @@ tabbedp.setSelectedIndex(1);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-tabbedp.setSelectedIndex(3);        // TODO add your handling code here:
+        if(txtL4Grados.getText().isEmpty() && txtL4Minutos.getText().isEmpty() && txtL4Segundos.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "Debe ingresar la cuarta lectura");
+        txtL4Grados.requestFocus();}
+        else if(txtL3Grados.getText().isEmpty() && txtL3Minutos.getText().isEmpty() && txtL3Segundos.getText().isEmpty()){
+         JOptionPane.showMessageDialog(this, "Debe ingresar la tercera lectura");
+         txtL3Grados.requestFocus();
+        }else if(txtL2Grados.getText().isEmpty() && txtL2Minutos.getText().isEmpty() && txtL2Segundos.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "Debe ingresar la segunda lectura");
+        txtL2Grados.requestFocus();}
+        else if(txtL1Grados.getText().isEmpty() && txtL1Minutos.getText().isEmpty() && txtL1Segundos.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "Debe ingresar la primera lectura");
+        txtL1Grados.requestFocus();}
+        else if(txtDisXEst.getText().isEmpty()){
+        JOptionPane.showMessageDialog(this, "Debe ingresar la distancia");
+        txtDisXEst.requestFocus();
+        }else{
+        tabbedp.setSelectedIndex(3);}        // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-this.dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
 tabbedp.setSelectedIndex(2);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void txtLongitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLongitudActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLongitudActionPerformed
+
+    private void txtDisXEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDisXEstActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDisXEstActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1530,19 +1537,16 @@ tabbedp.setSelectedIndex(2);        // TODO add your handling code here:
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup grupodebtn;
-    private javax.swing.JButton jBtnAceptar;
     private javax.swing.JButton jBtnCancelar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1594,7 +1598,7 @@ tabbedp.setSelectedIndex(2);        // TODO add your handling code here:
     private javax.swing.JTextField txtLatitud;
     private javax.swing.JTextField txtLongitud;
     private javax.swing.JTextField txtNMojones;
-    private javax.swing.JTextField txtNVertices;
+    public static javax.swing.JTextField txtNVertices;
     private javax.swing.JTextField txtTAGrados;
     private javax.swing.JTextField txtTAMinutos;
     private javax.swing.JTextField txtTASegundos;
