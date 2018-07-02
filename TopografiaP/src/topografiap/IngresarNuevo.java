@@ -763,6 +763,11 @@ public class IngresarNuevo extends javax.swing.JFrame {
         });
 
         jButton10.setText("Guardar");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setText("regresar");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -1499,6 +1504,16 @@ tabbedp.setSelectedIndex(2);        // TODO add your handling code here:
     private void txtDisXEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDisXEstActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDisXEstActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    if(txtDeflexionG.getText().isEmpty() && txtDeflexionM.getText().isEmpty() && txtDeflexionS.getText().isEmpty()){        // TODO add your handling code here:
+    JOptionPane.showMessageDialog(this, "Debe ingresar la Deflexion");
+    txtDeflexionG.requestFocus();
+    }else if(txtDisXMoj.getText().isEmpty()){
+    JOptionPane.showMessageDialog(this, "Debe ingresar la distancia");
+    txtDisXMoj.requestFocus();
+    }    
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
      * @param args the command line arguments
