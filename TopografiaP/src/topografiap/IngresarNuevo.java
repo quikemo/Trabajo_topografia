@@ -24,7 +24,9 @@ public class IngresarNuevo extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         grupodebtn.add(vistaaf);
         grupodebtn.add(vistaat);
-
+       
+        
+        
     }
 
     /**
@@ -91,7 +93,7 @@ public class IngresarNuevo extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtEstacion = new javax.swing.JTextField();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
@@ -592,11 +594,17 @@ public class IngresarNuevo extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("Estacion");
 
-        jTextField1.setEnabled(false);
+        txtEstacion.setText("1");
+        txtEstacion.setEnabled(false);
 
         jButton7.setText("Anterior");
 
         jButton8.setText("Siguiente");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -653,7 +661,7 @@ public class IngresarNuevo extends javax.swing.JFrame {
                         .addGap(83, 83, 83)
                         .addComponent(jButton7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEstacion, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton8))
                     .addGroup(jPanel4Layout.createSequentialGroup()
@@ -668,7 +676,7 @@ public class IngresarNuevo extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtEstacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7)
                     .addComponent(jButton8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
@@ -1447,7 +1455,12 @@ public class IngresarNuevo extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Debe de seleccionar que tipo de vista utilizo");}
             else{
         tabbedp.setSelectedIndex(1); 
+        
+       Calculo.CrearMatris(Integer.parseInt(txtNVertices.getText()));
+        
+      
         }       // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -1514,6 +1527,46 @@ tabbedp.setSelectedIndex(2);        // TODO add your handling code here:
     txtDisXMoj.requestFocus();
     }    
     }//GEN-LAST:event_jButton10ActionPerformed
+ 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+       if(Integer.parseInt(txtEstacion.getText())<Integer.parseInt(txtNVertices.getText())){
+       int numero = Integer.parseInt(txtEstacion.getText());
+           
+           
+           
+          Double Lectura1, Lectura2, Lectura3, Lectura4;
+        
+        
+          Lectura1 = Calculo.conversion(Double.parseDouble(txtL1Grados.getText()),Double.parseDouble(txtL1Minutos.getText()),Double.parseDouble(txtL1Segundos.getText()));
+          Lectura2 = Calculo.conversion(Double.parseDouble(txtL2Grados.getText()),Double.parseDouble(txtL2Minutos.getText()),Double.parseDouble(txtL2Segundos.getText()));
+          Lectura3 = Calculo.conversion(Double.parseDouble(txtL3Grados.getText()),Double.parseDouble(txtL3Minutos.getText()),Double.parseDouble(txtL3Segundos.getText()));
+          Lectura4 = Calculo.conversion(Double.parseDouble(txtL4Grados.getText()),Double.parseDouble(txtL4Minutos.getText()),Double.parseDouble(txtL4Segundos.getText()));
+          
+          Calculo.llenarMatris(Lectura1, Lectura2, Lectura3, Lectura4, numero );
+          numero = numero +1;
+          txtEstacion.setText(""+numero);
+          
+          txtL1Grados.setText("");
+          txtL1Minutos.setText("");
+          txtL1Segundos.setText("");
+          
+          txtL2Grados.setText("");
+          txtL2Minutos.setText("");
+          txtL2Segundos.setText("");
+          
+          txtL3Grados.setText("");
+          txtL3Minutos.setText("");
+          txtL3Segundos.setText("");
+          
+          txtL4Grados.setText("");
+          txtL4Minutos.setText("");
+          txtL4Segundos.setText("");
+          
+          txtDisXEst.setText("");
+          
+       }
+       
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1587,7 +1640,6 @@ tabbedp.setSelectedIndex(2);        // TODO add your handling code here:
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField13;
     private javax.swing.JTabbedPane tabbedp;
     private javax.swing.JTextField txtAIGrados;
@@ -1598,6 +1650,7 @@ tabbedp.setSelectedIndex(2);        // TODO add your handling code here:
     private javax.swing.JTextField txtDeflexionS;
     private javax.swing.JTextField txtDisXEst;
     private javax.swing.JTextField txtDisXMoj;
+    private javax.swing.JTextField txtEstacion;
     private javax.swing.JTextField txtL1Grados;
     private javax.swing.JTextField txtL1Minutos;
     private javax.swing.JTextField txtL1Segundos;

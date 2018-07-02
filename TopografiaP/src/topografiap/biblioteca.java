@@ -6,6 +6,8 @@ public class biblioteca {
 
     //instanciar un objeto de tipo Conexion
     Conexion cn = new Conexion();
+
+    
     
     //BD archivo
     public void insertararchivo(String idArchivo, String nomArchivo, String fecha) {
@@ -31,5 +33,7 @@ public class biblioteca {
     public void insertarmojones(String mojon, String num_verticenum, String distaciaXmojon, String lectura1, String vistaXmojon) {
         cn.UID("INSERT INTO mojones(mojon,num_verticenum,distaciaXmojon,lectura1,vistaXmojon) VALUES('" + mojon + "','" + num_verticenum + "','" + distaciaXmojon + "','" + lectura1 +"','" + vistaXmojon +"')");
     }
+    
+   
 
 }

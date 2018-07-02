@@ -48,7 +48,7 @@ public class panel_principal extends javax.swing.JFrame {
         setAutoRequestFocus(false);
         setPreferredSize(new java.awt.Dimension(800, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 380));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, 690, 380));
 
         jMenuBar1.setBorder(null);
         jMenuBar1.setAutoscrolls(true);
